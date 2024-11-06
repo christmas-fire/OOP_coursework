@@ -1,0 +1,3 @@
+/home/christmas_fire/OOP_coursework/build/CMakeFiles/MealDatabase.dir
+/home/christmas_fire/OOP_coursework/build/CMakeFiles/edit_cache.dir
+/home/christmas_fire/OOP_coursework/build/CMakeFiles/rebuild_cache.dir
