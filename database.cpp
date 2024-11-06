@@ -100,6 +100,133 @@ std::vector<std::unique_ptr<Meal>> Database::getAllMeals() {
     return meals;
 }
 
+std::vector<std::unique_ptr<Meal>> Database::getAllBreakfast() {
+    std::vector<std::unique_ptr<Meal>> meals;
+    const char* sql = "SELECT date, type, name, calories calories FROM meals WHERE type = 'Breakfast';";
+    sqlite3_stmt* stmt;
+    int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
+
+    if (rc != SQLITE_OK) {
+        std::cerr << "Failed to prepare statement: " << sqlite3_errmsg(db) << std::endl;
+        return meals;
+    }
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        std::string date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        std::string type = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        std::string name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        int calories = sqlite3_column_int(stmt, 3);
+
+        // Создаем объект соответствующего типа на основе типа из базы данных
+        if (type == "Breakfast") {
+            meals.emplace_back(std::make_unique<Breakfast>(date, name, calories));
+        } else if (type == "Lunch") {
+            meals.emplace_back(std::make_unique<Lunch>(date, name, calories));
+        } else if (type == "Dinner") {
+            meals.emplace_back(std::make_unique<Dinner>(date, name, calories));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return meals;
+}
+
+std::vector<std::unique_ptr<Meal>> Database::getAllLunch() {
+    std::vector<std::unique_ptr<Meal>> meals;
+    const char* sql = "SELECT date, type, name, calories calories FROM meals WHERE type = 'Lunch';";
+    sqlite3_stmt* stmt;
+    int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
+
+    if (rc != SQLITE_OK) {
+        std::cerr << "Failed to prepare statement: " << sqlite3_errmsg(db) << std::endl;
+        return meals;
+    }
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        std::string date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        std::string type = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        std::string name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        int calories = sqlite3_column_int(stmt, 3);
+
+        // Создаем объект соответствующего типа на основе типа из базы данных
+        if (type == "Breakfast") {
+            meals.emplace_back(std::make_unique<Breakfast>(date, name, calories));
+        } else if (type == "Lunch") {
+            meals.emplace_back(std::make_unique<Lunch>(date, name, calories));
+        } else if (type == "Dinner") {
+            meals.emplace_back(std::make_unique<Dinner>(date, name, calories));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return meals;
+}
+
+std::vector<std::unique_ptr<Meal>> Database::getAllDinner() {
+    std::vector<std::unique_ptr<Meal>> meals;
+    const char* sql = "SELECT date, type, name, calories calories FROM meals WHERE type = 'Dinner';";
+    sqlite3_stmt* stmt;
+    int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
+
+    if (rc != SQLITE_OK) {
+        std::cerr << "Failed to prepare statement: " << sqlite3_errmsg(db) << std::endl;
+        return meals;
+    }
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        std::string date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        std::string type = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        std::string name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        int calories = sqlite3_column_int(stmt, 3);
+
+        // Создаем объект соответствующего типа на основе типа из базы данных
+        if (type == "Breakfast") {
+            meals.emplace_back(std::make_unique<Breakfast>(date, name, calories));
+        } else if (type == "Lunch") {
+            meals.emplace_back(std::make_unique<Lunch>(date, name, calories));
+        } else if (type == "Dinner") {
+            meals.emplace_back(std::make_unique<Dinner>(date, name, calories));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return meals;
+}
+
+std::vector<std::unique_ptr<Meal>> Database::getOnName(const std::string& searchName) {
+    std::vector<std::unique_ptr<Meal>> meals;
+    const char* sql = "SELECT date, type, name, calories FROM meals WHERE name = ?;";
+    sqlite3_stmt* stmt;
+    int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
+
+    if (rc != SQLITE_OK) {
+        std::cerr << "Failed to prepare statement: " << sqlite3_errmsg(db) << std::endl;
+        return meals;
+    }
+
+    // Привязываем значение searchDate к параметру в запросе
+    sqlite3_bind_text(stmt, 1, searchName.c_str(), -1, SQLITE_STATIC);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        std::string date = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+        std::string type = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
+        std::string name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
+        int calories = sqlite3_column_int(stmt, 3);
+
+        // Создаем объект соответствующего типа на основе типа из базы данных
+        if (type == "Breakfast") {
+            meals.emplace_back(std::make_unique<Breakfast>(date, name, calories));
+        } else if (type == "Lunch") {
+            meals.emplace_back(std::make_unique<Lunch>(date, name, calories));
+        } else if (type == "Dinner") {
+            meals.emplace_back(std::make_unique<Dinner>(date, name, calories));
+        }
+    }
+
+    sqlite3_finalize(stmt);
+    return meals;
+}
+
 std::vector<std::unique_ptr<Meal>> Database::getOnDate(const std::string& searchDate) {
     std::vector<std::unique_ptr<Meal>> meals;
     const char* sql = "SELECT date, type, name, calories FROM meals WHERE date = ?;";
@@ -132,16 +259,4 @@ std::vector<std::unique_ptr<Meal>> Database::getOnDate(const std::string& search
 
     sqlite3_finalize(stmt);
     return meals;
-}
-
-
-// реализовать принт в зависимости от функции (или вынести все в отдельный файл output.cpp)
-void Database::printTable() {
-    for (const auto& meal : this->getAllMeals()) {
-        std::cout
-        << "| " << meal->getDate() << " |" << " "
-        << "| " << meal->getType() << " |" << " "
-        << "| " << meal->getName() << " |" << " "
-        << "| " << meal->getCalories() << " |" << "\n";
-    }
 }

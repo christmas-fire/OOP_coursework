@@ -4,6 +4,17 @@
 
 using namespace std;
 
+void print(std::vector<std::unique_ptr<Meal>>& meals) {
+    if (meals.empty()) {
+        std::cout << "Нет записей по этому фильтру." << std::endl;
+    } else {
+        for (const auto& meal : meals) {
+            std::cout << "Дата: " << meal->getDate() << ", Прием пищи: " << meal->getType() 
+                    << ", Блюдо: " << meal->getName() << ", Калории: " << meal->getCalories() << std::endl;
+        }
+    }
+}
+
 int main() {
     Database db("meals.db");
 
@@ -22,29 +33,72 @@ int main() {
         int calories;
         int pick;
 
-        std::cout << "1. Посмотреть всю БД" << std::endl;
-        std::cout << "2. Добавить запись" << std::endl;
+        std::cout << "1. Меню вывода БД" << std::endl;
+        std::cout << "2. Добавление новой записи" << std::endl;
         std::cout << "3. Выйти из программы" << std::endl;
         std::cout << "Выберите пункт: " << std::endl;
         cin >> pick;
-
-        // Очищаем буфер ввода после целочисленного ввода
         cin.ignore();
 
         switch (pick) {
             case 1: {
-                string searchDate;
-                cout << "Введите дату для поиска: ";
-                getline(cin, searchDate);  // Используем getline для ввода даты
+                int subpick;
 
-                std::vector<std::unique_ptr<Meal>> meals = db.getOnDate(searchDate);
+                std::cout << "1. Вывести все записи (приемы пищи)" << std::endl;
+                std::cout << "2. Вывести все завтраки" << std::endl;
+                std::cout << "3. Вывести все обеды" << std::endl;
+                std::cout << "4. Вывести все ужины" << std::endl;
+                std::cout << "5. Вывести все конкретные блюда" << std::endl;
+                std::cout << "6. Вывести все записи в конкретный день" << std::endl;
+                std::cout << "7. Выйти из меню вывода БД" << std::endl;
+                std::cout << "Выберите пункт: " << std::endl;
+                cin >> subpick;
+                cin.ignore();
 
-                if (meals.empty()) {
-                    std::cout << "Нет записей на эту дату." << std::endl;
-                } else {
-                    for (const auto& meal : meals) {
-                        std::cout << "Дата: " << meal->getDate() << ", Прием пищи: " << meal->getType() 
-                                  << ", Блюдо: " << meal->getName() << ", Калории: " << meal->getCalories() << std::endl;
+                switch (subpick) {
+                    case 1: {
+                        vector<unique_ptr<Meal>> meals = db.getAllMeals();
+                        print(meals);
+                        break;
+                    }
+                    case 2: {
+                        vector<unique_ptr<Meal>> breakfasts = db.getAllBreakfast();
+                        print(breakfasts);
+                        break;
+                    }
+                    case 3: {
+                        vector<unique_ptr<Meal>> lunches = db.getAllLunch();
+                        print(lunches);
+                        break;
+                    }
+                    case 4: {
+                        vector<unique_ptr<Meal>> dinners = db.getAllDinner();
+                        print(dinners);
+                        break;
+                    }
+                    case 5: {
+                        string searchName;
+                        cout << "Введите название блюда для поиска: ";
+                        getline(cin, searchName);  // Используем getline для ввода даты
+                        cin.ignore();
+
+                        std::vector<std::unique_ptr<Meal>> meals = db.getOnName(searchName);
+                        print(meals);
+                        break;
+                    }
+                    case 6: {
+                        string searchDate;
+                        cout << "Введите дату для поиска: ";
+                        getline(cin, searchDate);  // Используем getline для ввода даты
+                        cin.ignore();
+
+                        std::vector<std::unique_ptr<Meal>> meals = db.getOnDate(searchDate);
+                        print(meals);
+                        break;
+                    }
+                    case 7: {
+                        std::cout << "Вы вышли из меню вывода БД." << std::endl;
+                        break;
                     }
                 }
                 break;
@@ -81,6 +135,7 @@ int main() {
             case 3: {
                 std::cout << "Вы вышли из программы." << std::endl;
                 return 0;
+                break;
             } 
         }
     }
