@@ -1,1 +1,1 @@
-/usr/bin/g++ CMakeFiles/MealDatabase.dir/main.cpp.o CMakeFiles/MealDatabase.dir/database.cpp.o CMakeFiles/MealDatabase.dir/meal.cpp.o -o MealDatabase  /usr/lib/x86_64-linux-gnu/libsqlite3.so 
+/usr/bin/g++ -g CMakeFiles/MealDatabase.dir/main.cpp.o CMakeFiles/MealDatabase.dir/database.cpp.o CMakeFiles/MealDatabase.dir/meal.cpp.o CMakeFiles/MealDatabase.dir/output.cpp.o -o MealDatabase  /usr/lib/x86_64-linux-gnu/libsqlite3.so 

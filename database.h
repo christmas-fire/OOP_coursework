@@ -3,10 +3,11 @@
 
 #include "meal.h"
 #include <sqlite3.h>
-#include <string>
+
+#include <iostream>
 #include <vector>
 #include <memory>
-
+#include <iomanip>
 
 class Database {
 private:
@@ -20,14 +21,14 @@ public:
     void close();
 
     bool createTable();
-    bool addMeal(const Meal& meal); // Изменение здесь
-    // все с датой!
-    std::vector<std::unique_ptr<Meal>> getAllMeals(); // все с датой!
-    std::vector<std::unique_ptr<Meal>> getAllBreakfast();// все с датой!
-    std::vector<std::unique_ptr<Meal>> getAllLunch();// все с датой!
-    std::vector<std::unique_ptr<Meal>> getAllDinner();// все с датой!
-    std::vector<std::unique_ptr<Meal>> getOnName(const std::string& searchName);// все с датой! все названия блюд
-    std::vector<std::unique_ptr<Meal>> getOnDate(const std::string& searchDate); // все приемы пищи в конкретный день
+    bool addMeal(const Meal& meal);
+
+    std::vector<std::unique_ptr<Meal>> getAllMeals();
+    std::vector<std::unique_ptr<Meal>> getAllBreakfast();
+    std::vector<std::unique_ptr<Meal>> getAllLunch();
+    std::vector<std::unique_ptr<Meal>> getAllDinner();
+    std::vector<std::unique_ptr<Meal>> getByName(const std::string& searchName);
+    std::vector<std::unique_ptr<Meal>> getByDate(const std::string& searchDate);
 };
 
 #endif // DATABASE_H

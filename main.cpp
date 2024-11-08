@@ -1,28 +1,18 @@
 #include "database.h"
 #include "meal.h"
-#include <iostream>
-
-using namespace std;
-
-void print(std::vector<std::unique_ptr<Meal>>& meals) {
-    if (meals.empty()) {
-        std::cout << "Нет записей по этому фильтру." << std::endl;
-    } else {
-        for (const auto& meal : meals) {
-            std::cout << "Дата: " << meal->getDate() << ", Прием пищи: " << meal->getType() 
-                    << ", Блюдо: " << meal->getName() << ", Калории: " << meal->getCalories() << std::endl;
-        }
-    }
-}
+#include "output.h"
 
 int main() {
     Database db("meals.db");
+    Output my_output;
 
+    // Если файл БД не открылся, выводим сообщение об ошибке и завершаем работу программы
     if (!db.open()) {
         std::cerr << "Error: can't open database" << std::endl;
         return 1;
     }
 
+    // Если таблица в БД не создалась, выводим сообщение об ошибке и завершаем работу программы
     if (!db.createTable()) {
         std::cerr << "Error: can't create table" << std::endl;
         return 1;
@@ -31,72 +21,66 @@ int main() {
     while (true) {
         std::string date, type, name;
         int calories;
-        int pick;
+        int choice;
 
-        std::cout << "1. Меню вывода БД" << std::endl;
-        std::cout << "2. Добавление новой записи" << std::endl;
-        std::cout << "3. Выйти из программы" << std::endl;
-        std::cout << "Выберите пункт: " << std::endl;
-        cin >> pick;
-        cin.ignore();
+        my_output.printMenu();
+        std::cin >> choice;
+        std::cin.ignore();
 
-        switch (pick) {
+        switch (choice) {
             case 1: {
-                int subpick;
+                int subChoice;
+                my_output.printSubMenu();
+                std::cin >> subChoice;
+                std::cin.ignore();
 
-                std::cout << "1. Вывести все записи (приемы пищи)" << std::endl;
-                std::cout << "2. Вывести все завтраки" << std::endl;
-                std::cout << "3. Вывести все обеды" << std::endl;
-                std::cout << "4. Вывести все ужины" << std::endl;
-                std::cout << "5. Вывести все конкретные блюда" << std::endl;
-                std::cout << "6. Вывести все записи в конкретный день" << std::endl;
-                std::cout << "7. Выйти из меню вывода БД" << std::endl;
-                std::cout << "Выберите пункт: " << std::endl;
-                cin >> subpick;
-                cin.ignore();
-
-                switch (subpick) {
+                switch (subChoice) {
                     case 1: {
-                        vector<unique_ptr<Meal>> meals = db.getAllMeals();
-                        print(meals);
+                        // Ищем и выводим все приемы пищи
+                        std::vector<std::unique_ptr<Meal>> meals = db.getAllMeals();
+                        my_output.printTable(meals);
                         break;
                     }
                     case 2: {
-                        vector<unique_ptr<Meal>> breakfasts = db.getAllBreakfast();
-                        print(breakfasts);
+                        // Ищем и выводим все завтраки
+                        std::vector<std::unique_ptr<Meal>> breakfasts = db.getAllBreakfast();
+                        my_output.printTable(breakfasts);
                         break;
                     }
                     case 3: {
-                        vector<unique_ptr<Meal>> lunches = db.getAllLunch();
-                        print(lunches);
+                        // Ищем и выводим все обеды
+                        std::vector<std::unique_ptr<Meal>> lunches = db.getAllLunch();
+                        my_output.printTable(lunches);
                         break;
                     }
                     case 4: {
-                        vector<unique_ptr<Meal>> dinners = db.getAllDinner();
-                        print(dinners);
+                        // Ищем и выводим все ужины
+                        std::vector<std::unique_ptr<Meal>> dinners = db.getAllDinner();
+                        my_output.printTable(dinners);
                         break;
                     }
                     case 5: {
-                        string searchName;
-                        cout << "Введите название блюда для поиска: ";
-                        getline(cin, searchName);  // Используем getline для ввода даты
-                        cin.ignore();
+                        // Ищем и выводим конкретные приемы пищи
+                        std::string nameToSearch;
+                        std::cout << "Введите название блюда для поиска: ";
+                        std::getline(std::cin, nameToSearch);
 
-                        std::vector<std::unique_ptr<Meal>> meals = db.getOnName(searchName);
-                        print(meals);
+                        std::vector<std::unique_ptr<Meal>> meals = db.getByName(nameToSearch);
+                        my_output.printTable(meals);
                         break;
                     }
                     case 6: {
-                        string searchDate;
-                        cout << "Введите дату для поиска: ";
-                        getline(cin, searchDate);  // Используем getline для ввода даты
-                        cin.ignore();
+                        // Ищем и выводим приемы пищи в конкретную дату
+                        std::string dateToSearch;
+                        std::cout << "Введите дату для поиска: ";
+                        std::getline(std::cin, dateToSearch);
 
-                        std::vector<std::unique_ptr<Meal>> meals = db.getOnDate(searchDate);
-                        print(meals);
+                        std::vector<std::unique_ptr<Meal>> meals = db.getByDate(dateToSearch);
+                        my_output.printTable(meals);
                         break;
                     }
                     case 7: {
+                        // Завершаем работу меню вывода БД
                         std::cout << "Вы вышли из меню вывода БД." << std::endl;
                         break;
                     }
@@ -104,42 +88,40 @@ int main() {
                 break;
             }
             case 2: {
-                cout << "Введите дату: ";
-                getline(cin, date);  // Используем getline вместо cin >>
-                cout << "Введите прием пищи: ";
-                getline(cin, type);  // Используем getline вместо cin >>
-                cout << "Введите название блюда: ";
-                getline(cin, name);  // Используем getline вместо cin >>
-                cout << "Введите кол-во калорий этого блюда: ";
-                cin >> calories;
-
-                // Очищаем буфер ввода после целочисленного ввода
-                cin.ignore();
+                // Ввод информации о приеме пищи
+                std::cout << "Введите дату: ";
+                std::getline(std::cin, date);
+                std::cout << "Введите прием пищи: ";
+                std::getline(std::cin, type);
+                std::cout << "Введите название блюда: ";
+                std::getline(std::cin, name);
+                std::cout << "Введите кол-во калорий этого блюда: ";
+                std::cin >> calories;
+                std::cin.ignore();
 
                 // Добавляем запись в базу данных
-                if (type == "Breakfast" || type == "завтрак" || type == "Breakfast" || type == "Завтрак") {
-                    Breakfast to_add(date, name, calories);
-                    db.addMeal(to_add);
-                } else if (type == "Lunch" || type == "обед" || type == "Lunch" || type == "Обед") {
-                    Lunch to_add(date, name, calories);
-                    db.addMeal(to_add);
-                } else if (type == "Dinner" || type == "ужин" || type == "Dinner" || type == "Ужин") {
-                    Dinner to_add(date, name, calories);
-                    db.addMeal(to_add);
+                if (type == "Breakfast" || type == "завтрак" || type == "breakfast" || type == "Завтрак") {
+                    Breakfast toAdd(date, name, calories);
+                    db.addMeal(toAdd);
+                } else if (type == "Lunch" || type == "обед" || type == "lunch" || type == "Обед") {
+                    Lunch toAdd(date, name, calories);
+                    db.addMeal(toAdd);
+                } else if (type == "Dinner" || type == "ужин" || type == "dinner" || type == "Ужин") {
+                    Dinner toAdd(date, name, calories);
+                    db.addMeal(toAdd);
                 } else {
-                    std::cout << "Неизвестный тип приема пищи!" << std::endl;
+                    std::cerr << "Error: unknown type of meal." << std::endl;
+                    return 1;
                 }
-
                 break;
             }
             case 3: {
+                // Завершаем работу программы
                 std::cout << "Вы вышли из программы." << std::endl;
                 return 0;
-                break;
             } 
         }
     }
-
     db.close();
     return 0;
 }

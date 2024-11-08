@@ -3,6 +3,7 @@
 
 #include <string>
 
+// Интерфейс "прием пищи"
 class Meal {
 private:
     std::string date;
@@ -25,6 +26,7 @@ public:
     virtual int getCalories() const;
 };
 
+// Класс "завтрак"
 class Breakfast : public Meal {
 public:
     Breakfast(const std::string& date, const std::string& name, int calories)
@@ -41,6 +43,7 @@ public:
     int getCalories() const override { return Meal::getCalories(); }
 };
 
+// Класс "обед"
 class Lunch : public Meal {
 public:
     Lunch(const std::string& date, const std::string& name, int calories)
@@ -57,6 +60,7 @@ public:
     int getCalories() const override { return Meal::getCalories(); }
 };
 
+// Класс "ужин"
 class Dinner : public Meal {
 public:
     Dinner(const std::string& date, const std::string& name, int calories)

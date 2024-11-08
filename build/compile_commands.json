@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/christmas_fire/OOP_coursework/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/main.cpp.o -c /home/christmas_fire/OOP_coursework/main.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/main.cpp"
+},
+{
+  "directory": "/home/christmas_fire/OOP_coursework/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/database.cpp.o -c /home/christmas_fire/OOP_coursework/database.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/database.cpp"
+},
+{
+  "directory": "/home/christmas_fire/OOP_coursework/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/meal.cpp.o -c /home/christmas_fire/OOP_coursework/meal.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/meal.cpp"
+},
+{
+  "directory": "/home/christmas_fire/OOP_coursework/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/output.cpp.o -c /home/christmas_fire/OOP_coursework/output.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/output.cpp"
+}
+]

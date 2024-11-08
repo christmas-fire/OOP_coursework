@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MealDatabase.dir/main.cpp.o.d"
   "CMakeFiles/MealDatabase.dir/meal.cpp.o"
   "CMakeFiles/MealDatabase.dir/meal.cpp.o.d"
+  "CMakeFiles/MealDatabase.dir/output.cpp.o"
+  "CMakeFiles/MealDatabase.dir/output.cpp.o.d"
   "MealDatabase"
   "MealDatabase.pdb"
 )

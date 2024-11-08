@@ -1,5 +1,6 @@
-CMakeFiles/MealDatabase.dir/main.cpp.o: \
- /home/christmas_fire/OOP_coursework/main.cpp /usr/include/stdc-predef.h \
+CMakeFiles/MealDatabase.dir/output.cpp.o: \
+ /home/christmas_fire/OOP_coursework/output.cpp \
+ /usr/include/stdc-predef.h /home/christmas_fire/OOP_coursework/output.h \
  /home/christmas_fire/OOP_coursework/database.h \
  /home/christmas_fire/OOP_coursework/meal.h /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -182,5 +183,4 @@ CMakeFiles/MealDatabase.dir/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h \
  /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc \
- /home/christmas_fire/OOP_coursework/output.h
+ /usr/include/c++/11/bits/sstream.tcc

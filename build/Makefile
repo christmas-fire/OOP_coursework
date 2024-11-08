@@ -201,6 +201,30 @@ meal.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/meal.cpp.s
 .PHONY : meal.cpp.s
 
+output.o: output.cpp.o
+.PHONY : output.o
+
+# target to build an object file
+output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.o
+.PHONY : output.cpp.o
+
+output.i: output.cpp.i
+.PHONY : output.i
+
+# target to preprocess a source file
+output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.i
+.PHONY : output.cpp.i
+
+output.s: output.cpp.s
+.PHONY : output.s
+
+# target to generate assembly for a file
+output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.s
+.PHONY : output.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... meal.o"
 	@echo "... meal.i"
 	@echo "... meal.s"
+	@echo "... output.o"
+	@echo "... output.i"
+	@echo "... output.s"
 .PHONY : help
 
 

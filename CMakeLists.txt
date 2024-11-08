@@ -13,6 +13,7 @@ set(SOURCE_FILES
     main.cpp
     database.cpp
     meal.cpp
+    output.cpp
 )
 
 # Подключение SQLite3
