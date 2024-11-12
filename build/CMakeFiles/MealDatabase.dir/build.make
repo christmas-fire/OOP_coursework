@@ -69,76 +69,76 @@ include CMakeFiles/MealDatabase.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MealDatabase.dir/flags.make
 
-CMakeFiles/MealDatabase.dir/main.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
-CMakeFiles/MealDatabase.dir/main.cpp.o: ../main.cpp
-CMakeFiles/MealDatabase.dir/main.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MealDatabase.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/main.cpp.o -MF CMakeFiles/MealDatabase.dir/main.cpp.o.d -o CMakeFiles/MealDatabase.dir/main.cpp.o -c /home/christmas_fire/OOP_coursework/main.cpp
+CMakeFiles/MealDatabase.dir/src/main.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
+CMakeFiles/MealDatabase.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/MealDatabase.dir/src/main.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MealDatabase.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/src/main.cpp.o -MF CMakeFiles/MealDatabase.dir/src/main.cpp.o.d -o CMakeFiles/MealDatabase.dir/src/main.cpp.o -c /home/christmas_fire/OOP_coursework/src/main.cpp
 
-CMakeFiles/MealDatabase.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/main.cpp > CMakeFiles/MealDatabase.dir/main.cpp.i
+CMakeFiles/MealDatabase.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/src/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/src/main.cpp > CMakeFiles/MealDatabase.dir/src/main.cpp.i
 
-CMakeFiles/MealDatabase.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/main.cpp -o CMakeFiles/MealDatabase.dir/main.cpp.s
+CMakeFiles/MealDatabase.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/src/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/src/main.cpp -o CMakeFiles/MealDatabase.dir/src/main.cpp.s
 
-CMakeFiles/MealDatabase.dir/database.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
-CMakeFiles/MealDatabase.dir/database.cpp.o: ../database.cpp
-CMakeFiles/MealDatabase.dir/database.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MealDatabase.dir/database.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/database.cpp.o -MF CMakeFiles/MealDatabase.dir/database.cpp.o.d -o CMakeFiles/MealDatabase.dir/database.cpp.o -c /home/christmas_fire/OOP_coursework/database.cpp
+CMakeFiles/MealDatabase.dir/src/database.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
+CMakeFiles/MealDatabase.dir/src/database.cpp.o: ../src/database.cpp
+CMakeFiles/MealDatabase.dir/src/database.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MealDatabase.dir/src/database.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/src/database.cpp.o -MF CMakeFiles/MealDatabase.dir/src/database.cpp.o.d -o CMakeFiles/MealDatabase.dir/src/database.cpp.o -c /home/christmas_fire/OOP_coursework/src/database.cpp
 
-CMakeFiles/MealDatabase.dir/database.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/database.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/database.cpp > CMakeFiles/MealDatabase.dir/database.cpp.i
+CMakeFiles/MealDatabase.dir/src/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/src/database.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/src/database.cpp > CMakeFiles/MealDatabase.dir/src/database.cpp.i
 
-CMakeFiles/MealDatabase.dir/database.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/database.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/database.cpp -o CMakeFiles/MealDatabase.dir/database.cpp.s
+CMakeFiles/MealDatabase.dir/src/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/src/database.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/src/database.cpp -o CMakeFiles/MealDatabase.dir/src/database.cpp.s
 
-CMakeFiles/MealDatabase.dir/meal.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
-CMakeFiles/MealDatabase.dir/meal.cpp.o: ../meal.cpp
-CMakeFiles/MealDatabase.dir/meal.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MealDatabase.dir/meal.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/meal.cpp.o -MF CMakeFiles/MealDatabase.dir/meal.cpp.o.d -o CMakeFiles/MealDatabase.dir/meal.cpp.o -c /home/christmas_fire/OOP_coursework/meal.cpp
+CMakeFiles/MealDatabase.dir/src/meal.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
+CMakeFiles/MealDatabase.dir/src/meal.cpp.o: ../src/meal.cpp
+CMakeFiles/MealDatabase.dir/src/meal.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MealDatabase.dir/src/meal.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/src/meal.cpp.o -MF CMakeFiles/MealDatabase.dir/src/meal.cpp.o.d -o CMakeFiles/MealDatabase.dir/src/meal.cpp.o -c /home/christmas_fire/OOP_coursework/src/meal.cpp
 
-CMakeFiles/MealDatabase.dir/meal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/meal.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/meal.cpp > CMakeFiles/MealDatabase.dir/meal.cpp.i
+CMakeFiles/MealDatabase.dir/src/meal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/src/meal.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/src/meal.cpp > CMakeFiles/MealDatabase.dir/src/meal.cpp.i
 
-CMakeFiles/MealDatabase.dir/meal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/meal.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/meal.cpp -o CMakeFiles/MealDatabase.dir/meal.cpp.s
+CMakeFiles/MealDatabase.dir/src/meal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/src/meal.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/src/meal.cpp -o CMakeFiles/MealDatabase.dir/src/meal.cpp.s
 
-CMakeFiles/MealDatabase.dir/output.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
-CMakeFiles/MealDatabase.dir/output.cpp.o: ../output.cpp
-CMakeFiles/MealDatabase.dir/output.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MealDatabase.dir/output.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/output.cpp.o -MF CMakeFiles/MealDatabase.dir/output.cpp.o.d -o CMakeFiles/MealDatabase.dir/output.cpp.o -c /home/christmas_fire/OOP_coursework/output.cpp
+CMakeFiles/MealDatabase.dir/src/output.cpp.o: CMakeFiles/MealDatabase.dir/flags.make
+CMakeFiles/MealDatabase.dir/src/output.cpp.o: ../src/output.cpp
+CMakeFiles/MealDatabase.dir/src/output.cpp.o: CMakeFiles/MealDatabase.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/christmas_fire/OOP_coursework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MealDatabase.dir/src/output.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MealDatabase.dir/src/output.cpp.o -MF CMakeFiles/MealDatabase.dir/src/output.cpp.o.d -o CMakeFiles/MealDatabase.dir/src/output.cpp.o -c /home/christmas_fire/OOP_coursework/src/output.cpp
 
-CMakeFiles/MealDatabase.dir/output.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/output.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/output.cpp > CMakeFiles/MealDatabase.dir/output.cpp.i
+CMakeFiles/MealDatabase.dir/src/output.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MealDatabase.dir/src/output.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/christmas_fire/OOP_coursework/src/output.cpp > CMakeFiles/MealDatabase.dir/src/output.cpp.i
 
-CMakeFiles/MealDatabase.dir/output.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/output.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/output.cpp -o CMakeFiles/MealDatabase.dir/output.cpp.s
+CMakeFiles/MealDatabase.dir/src/output.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MealDatabase.dir/src/output.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/christmas_fire/OOP_coursework/src/output.cpp -o CMakeFiles/MealDatabase.dir/src/output.cpp.s
 
 # Object files for target MealDatabase
 MealDatabase_OBJECTS = \
-"CMakeFiles/MealDatabase.dir/main.cpp.o" \
-"CMakeFiles/MealDatabase.dir/database.cpp.o" \
-"CMakeFiles/MealDatabase.dir/meal.cpp.o" \
-"CMakeFiles/MealDatabase.dir/output.cpp.o"
+"CMakeFiles/MealDatabase.dir/src/main.cpp.o" \
+"CMakeFiles/MealDatabase.dir/src/database.cpp.o" \
+"CMakeFiles/MealDatabase.dir/src/meal.cpp.o" \
+"CMakeFiles/MealDatabase.dir/src/output.cpp.o"
 
 # External object files for target MealDatabase
 MealDatabase_EXTERNAL_OBJECTS =
 
-MealDatabase: CMakeFiles/MealDatabase.dir/main.cpp.o
-MealDatabase: CMakeFiles/MealDatabase.dir/database.cpp.o
-MealDatabase: CMakeFiles/MealDatabase.dir/meal.cpp.o
-MealDatabase: CMakeFiles/MealDatabase.dir/output.cpp.o
+MealDatabase: CMakeFiles/MealDatabase.dir/src/main.cpp.o
+MealDatabase: CMakeFiles/MealDatabase.dir/src/database.cpp.o
+MealDatabase: CMakeFiles/MealDatabase.dir/src/meal.cpp.o
+MealDatabase: CMakeFiles/MealDatabase.dir/src/output.cpp.o
 MealDatabase: CMakeFiles/MealDatabase.dir/build.make
 MealDatabase: /usr/lib/x86_64-linux-gnu/libsqlite3.so
 MealDatabase: CMakeFiles/MealDatabase.dir/link.txt

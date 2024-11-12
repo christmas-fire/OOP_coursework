@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/christmas_fire/OOP_coursework/database.cpp" "CMakeFiles/MealDatabase.dir/database.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/database.cpp.o.d"
-  "/home/christmas_fire/OOP_coursework/main.cpp" "CMakeFiles/MealDatabase.dir/main.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/main.cpp.o.d"
-  "/home/christmas_fire/OOP_coursework/meal.cpp" "CMakeFiles/MealDatabase.dir/meal.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/meal.cpp.o.d"
-  "/home/christmas_fire/OOP_coursework/output.cpp" "CMakeFiles/MealDatabase.dir/output.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/output.cpp.o.d"
+  "/home/christmas_fire/OOP_coursework/src/database.cpp" "CMakeFiles/MealDatabase.dir/src/database.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/src/database.cpp.o.d"
+  "/home/christmas_fire/OOP_coursework/src/main.cpp" "CMakeFiles/MealDatabase.dir/src/main.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/src/main.cpp.o.d"
+  "/home/christmas_fire/OOP_coursework/src/meal.cpp" "CMakeFiles/MealDatabase.dir/src/meal.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/src/meal.cpp.o.d"
+  "/home/christmas_fire/OOP_coursework/src/output.cpp" "CMakeFiles/MealDatabase.dir/src/output.cpp.o" "gcc" "CMakeFiles/MealDatabase.dir/src/output.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -129,101 +129,101 @@ MealDatabase/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/build
 .PHONY : MealDatabase/fast
 
-database.o: database.cpp.o
-.PHONY : database.o
+src/database.o: src/database.cpp.o
+.PHONY : src/database.o
 
 # target to build an object file
-database.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/database.cpp.o
-.PHONY : database.cpp.o
+src/database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/database.cpp.o
+.PHONY : src/database.cpp.o
 
-database.i: database.cpp.i
-.PHONY : database.i
+src/database.i: src/database.cpp.i
+.PHONY : src/database.i
 
 # target to preprocess a source file
-database.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/database.cpp.i
-.PHONY : database.cpp.i
+src/database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/database.cpp.i
+.PHONY : src/database.cpp.i
 
-database.s: database.cpp.s
-.PHONY : database.s
+src/database.s: src/database.cpp.s
+.PHONY : src/database.s
 
 # target to generate assembly for a file
-database.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/database.cpp.s
-.PHONY : database.cpp.s
+src/database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/database.cpp.s
+.PHONY : src/database.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-meal.o: meal.cpp.o
-.PHONY : meal.o
+src/meal.o: src/meal.cpp.o
+.PHONY : src/meal.o
 
 # target to build an object file
-meal.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/meal.cpp.o
-.PHONY : meal.cpp.o
+src/meal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/meal.cpp.o
+.PHONY : src/meal.cpp.o
 
-meal.i: meal.cpp.i
-.PHONY : meal.i
+src/meal.i: src/meal.cpp.i
+.PHONY : src/meal.i
 
 # target to preprocess a source file
-meal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/meal.cpp.i
-.PHONY : meal.cpp.i
+src/meal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/meal.cpp.i
+.PHONY : src/meal.cpp.i
 
-meal.s: meal.cpp.s
-.PHONY : meal.s
+src/meal.s: src/meal.cpp.s
+.PHONY : src/meal.s
 
 # target to generate assembly for a file
-meal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/meal.cpp.s
-.PHONY : meal.cpp.s
+src/meal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/meal.cpp.s
+.PHONY : src/meal.cpp.s
 
-output.o: output.cpp.o
-.PHONY : output.o
+src/output.o: src/output.cpp.o
+.PHONY : src/output.o
 
 # target to build an object file
-output.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.o
-.PHONY : output.cpp.o
+src/output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/output.cpp.o
+.PHONY : src/output.cpp.o
 
-output.i: output.cpp.i
-.PHONY : output.i
+src/output.i: src/output.cpp.i
+.PHONY : src/output.i
 
 # target to preprocess a source file
-output.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.i
-.PHONY : output.cpp.i
+src/output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/output.cpp.i
+.PHONY : src/output.cpp.i
 
-output.s: output.cpp.s
-.PHONY : output.s
+src/output.s: src/output.cpp.s
+.PHONY : src/output.s
 
 # target to generate assembly for a file
-output.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/output.cpp.s
-.PHONY : output.cpp.s
+src/output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MealDatabase.dir/build.make CMakeFiles/MealDatabase.dir/src/output.cpp.s
+.PHONY : src/output.cpp.s
 
 # Help Target
 help:
@@ -234,18 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MealDatabase"
-	@echo "... database.o"
-	@echo "... database.i"
-	@echo "... database.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... meal.o"
-	@echo "... meal.i"
-	@echo "... meal.s"
-	@echo "... output.o"
-	@echo "... output.i"
-	@echo "... output.s"
+	@echo "... src/database.o"
+	@echo "... src/database.i"
+	@echo "... src/database.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/meal.o"
+	@echo "... src/meal.i"
+	@echo "... src/meal.s"
+	@echo "... src/output.o"
+	@echo "... src/output.i"
+	@echo "... src/output.s"
 .PHONY : help
 
 

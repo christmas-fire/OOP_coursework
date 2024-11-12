@@ -10,10 +10,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Добавление исходных файлов
 set(SOURCE_FILES
-    main.cpp
-    database.cpp
-    meal.cpp
-    output.cpp
+    src/main.cpp
+    src/database.cpp
+    src/meal.cpp
+    src/output.cpp
 )
 
 # Подключение SQLite3

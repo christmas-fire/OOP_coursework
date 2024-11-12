@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/christmas_fire/OOP_coursework/build",
-  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/main.cpp.o -c /home/christmas_fire/OOP_coursework/main.cpp",
-  "file": "/home/christmas_fire/OOP_coursework/main.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/src/main.cpp.o -c /home/christmas_fire/OOP_coursework/src/main.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/src/main.cpp"
 },
 {
   "directory": "/home/christmas_fire/OOP_coursework/build",
-  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/database.cpp.o -c /home/christmas_fire/OOP_coursework/database.cpp",
-  "file": "/home/christmas_fire/OOP_coursework/database.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/src/database.cpp.o -c /home/christmas_fire/OOP_coursework/src/database.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/src/database.cpp"
 },
 {
   "directory": "/home/christmas_fire/OOP_coursework/build",
-  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/meal.cpp.o -c /home/christmas_fire/OOP_coursework/meal.cpp",
-  "file": "/home/christmas_fire/OOP_coursework/meal.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/src/meal.cpp.o -c /home/christmas_fire/OOP_coursework/src/meal.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/src/meal.cpp"
 },
 {
   "directory": "/home/christmas_fire/OOP_coursework/build",
-  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/output.cpp.o -c /home/christmas_fire/OOP_coursework/output.cpp",
-  "file": "/home/christmas_fire/OOP_coursework/output.cpp"
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/MealDatabase.dir/src/output.cpp.o -c /home/christmas_fire/OOP_coursework/src/output.cpp",
+  "file": "/home/christmas_fire/OOP_coursework/src/output.cpp"
 }
 ]
